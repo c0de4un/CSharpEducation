@@ -40,7 +40,7 @@ class Program
         }
 
         // #3
-        Console.WriteLine("\nПoдcчeт суммы квадрата второго столбца");
+        Console.WriteLine("\n3. Пoдcчeт суммы квадрата второго столбца");
         const int FLOAT_NUMBERS_ROWS = 3;
         const int FLOAT_NUMBERS_COLS = 3;
         float[,] floatNumbers = new float[FLOAT_NUMBERS_ROWS, FLOAT_NUMBERS_COLS];
