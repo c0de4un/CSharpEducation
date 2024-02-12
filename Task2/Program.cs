@@ -11,31 +11,47 @@ class Program
         const int MAX_USER_NUMBERS = 5;
 
         string? userInput = "";
+        int userInputNumber = 0;
         int[] userInputNumbers = new int[MAX_USER_NUMBERS];
         Console.WriteLine("1. Ввод чисел в массив");
         for (int i = 0; i < MAX_USER_NUMBERS; i++) {
             Console.WriteLine($"Введите число #{i + 1}");
             userInput = Console.ReadLine();
 
-            if (userInput == null) {
+            if (int.TryParse(userInput, out userInputNumber)) {
+                userInputNumbers[i] = userInputNumber;
+            } else {
                 Console.WriteLine("Пусстой ввод");
                 i--;
                 continue;
             }
-
-            userInputNumbers[i] = int.Parse(userInput);
         }
 
         // #2
         Console.WriteLine("\n2. Инвертирование массива целых чисел:");
         const int MAX_INVERSION_NUMBERS = 10;
-        int[] inversionNumbers = new int[MAX_INVERSION_NUMBERS];
+        int[] notInvertedNumbers = new int[MAX_INVERSION_NUMBERS];
         for (int i = 0; i < MAX_INVERSION_NUMBERS; i++) {
-            inversionNumbers[i] = random.Next(999, 9999);
+            notInvertedNumbers[i] = random.Next(999, 9999);
         }
-        Array.Reverse(inversionNumbers); // Вместо цикла for, используем Array
+
+        // Инвертируем через for (но можно через Array.Reverse()) & Выводим результат
+        int[] invertedNumbers = new int[MAX_INVERSION_NUMBERS];
+        const int lastIndex = (MAX_INVERSION_NUMBERS - 1);
+        const int halfSize = MAX_INVERSION_NUMBERS / 2;
+        int a = 0;
+        int b = 0;
+        for (int i = 0; i < halfSize; i++) {
+            a = notInvertedNumbers[i];
+            b = notInvertedNumbers[lastIndex - i];
+            invertedNumbers[i] = b;
+            invertedNumbers[lastIndex - i] = a;
+        }
+
+        // Вывод результата
+        Console.WriteLine("Исходный порядок | Инвертированный порядок");
         for (int i = 0; i < MAX_INVERSION_NUMBERS; i++) {
-            Console.WriteLine(inversionNumbers[i]);
+            Console.WriteLine($"{notInvertedNumbers[i]} | {invertedNumbers[i]}");
         }
 
         // #3
