@@ -1,6 +1,5 @@
 ﻿namespace Task2;
 using System;
-using System.Security.Cryptography;
 
 class Program
 {
