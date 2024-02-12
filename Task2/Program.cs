@@ -58,14 +58,12 @@ class Program
         Console.WriteLine("\n3. Пoдcчeт суммы квадрата второго столбца");
         const int FLOAT_NUMBERS_ROWS = 3;
         const int FLOAT_NUMBERS_COLS = 3;
-        float[,] floatNumbers = new float[FLOAT_NUMBERS_ROWS, FLOAT_NUMBERS_COLS];
-        string rndNumber_str = "";
-        float sum = 0.00F;
-        float cellValue = 0.00F;
+        double[,] floatNumbers = new double[FLOAT_NUMBERS_ROWS, FLOAT_NUMBERS_COLS];
+        double sum = 0.00;
+        double cellValue = 0.00;
         for (int col = 0; col < FLOAT_NUMBERS_COLS; col++) {
             for (int row = 0; row < FLOAT_NUMBERS_ROWS; row++) {
-                rndNumber_str = $"{random.Next(99, 9999)}.{random.Next(0, 9999)}";
-                cellValue = float.Parse(rndNumber_str);
+                cellValue = random.NextDouble() * 8999.0 + 999.99;
                 floatNumbers[row, col] = cellValue;
                 sum += cellValue * cellValue;
 
