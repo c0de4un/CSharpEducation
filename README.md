@@ -6,7 +6,7 @@ C# .Net Core Educational Solution
 dotnet build .
 ```
 
-## Running 
+## Running
 Each project is build in its `bin` directory
 
 ### Task2
@@ -17,3 +17,6 @@ Each project is build in its `bin` directory
 
 ### Task5
 ![alt text](Task5/task5.jpg)
+
+### Task6
+![alt text](Task5/task6.jpg)
