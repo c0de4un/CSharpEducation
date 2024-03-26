@@ -19,7 +19,7 @@ Each project is build in its `bin` directory
 ![alt text](Task5/task5.jpg)
 
 ### Task6
-![alt text](Task5/task6.jpg)
+![alt text](Task6/task6.jpg)
 
 ### Task7
 ![alt text](task7.jpg)
